@@ -31,7 +31,9 @@ function showLoader(){
 }
 
 function hideLoader(){
-    document.getElementById("modal").style.display='none';
+    setTimeout(() => {
+        document.getElementById("modal").style.display='none';    
+    }, 3000);
 }
 
 function listener(){
