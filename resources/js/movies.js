@@ -38,8 +38,13 @@ function hideLoader(){
 
 function listener(){
     document.getElementById("movie").addEventListener('click',selectedMovie,false);
+    document.getElementById("buscador").addEventListener('keyup',search)
 }
-
+function search(e){
+    if(e.target.value.length>3){
+        alert("buscar "+e.target.value);
+    }
+}
 function selectedMovie(e){
     var closest = event.target.closest(".carousel-item__details");
     var id=closest.dataset.id
